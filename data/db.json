@@ -1,0 +1,6 @@
+{
+  "perfumes" : [
+    {"id" : 1, "name" : "One Million", "description" : "", "price" : 50},
+    {"id" : 2, "name" : "One Million", "description" : "", "price" : 50}
+  ]
+}

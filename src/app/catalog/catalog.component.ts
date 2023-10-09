@@ -13,4 +13,7 @@ export class CatalogComponent {
     {id : 4, name : "Invictus", description : "", price : 50},
     {id : 5, name : "Ultra Male", description : "", price : 50},
   ]
+
+  showDetails(parfume: any) {
+  }
 }

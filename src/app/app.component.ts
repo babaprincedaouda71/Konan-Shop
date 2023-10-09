@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'konan';
+
+  actions : Array<any> = [
+    {title : "Accueil", "route" : "/home", icon : "bi bi-house"},
+    {title : "Catalogue", "route" : "/catalog", icon : ""},
+    {title : "A Propos", "route" : "/about", icon : "bi bi-question"},
+  ]
+
+  currentAction : any
+
+  setCurrentAction(action: any) {
+    this.currentAction = action;
+  }
 }

@@ -25,5 +25,13 @@
       "price": 50
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "id": 1,
+      "name": "One Million",
+      "description": "One Million de Paco Rabanne incarne le luxe et la séduction. Ce parfum masculin emblématique mélange des notes pétillantes d'agrumes avec des accents épicés et boisés pour créer un parfum captivant et audacieux. Son flacon doré en forme de lingot d'or symbolise le pouvoir et la confiance en soi. Idéal pour les soirées spéciales et les occasions où vous souhaitez laisser une impression inoubliable.",
+      "price": 50,
+      "quantity": 3
+    }
+  ]
 }

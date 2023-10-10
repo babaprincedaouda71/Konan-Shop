@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {Product} from "../model/product.model";
+import {Cart, Product} from "../model/product.model";
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +13,8 @@ export class ProductService {
   public getProducts() : Observable<Array<Product>>{
     return this.http.get<Array<Product>>("http://localhost:3000/perfumes")
   }
-  public getProductsFromCart() : Observable<Array<Product>>{
-    return this.http.get<Array<Product>>("http://localhost:3000/cart")
+  public getProductsFromCart() : Observable<Array<Cart>>{
+    return this.http.get<Array<Cart>>("http://localhost:3000/cart")
   }
 
   public getProduct(productId : number) : Observable<Product>{

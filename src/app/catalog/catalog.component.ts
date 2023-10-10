@@ -23,7 +23,4 @@ export class CatalogComponent implements OnInit{
         }
       })
   }
-
-  showDetails(parfume: any) {
-  }
 }

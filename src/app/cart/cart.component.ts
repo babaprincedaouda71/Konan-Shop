@@ -12,14 +12,20 @@ export class CartComponent implements OnInit{
   constructor(private productService : ProductService) {
   }
 
-  products$! : Observable<Array<Cart>>
+  products : Array<Cart> = []
 
   ngOnInit(): void {
     this.getProductsFromCart()
   }
 
   getProductsFromCart(){
-    this.products$ = this.productService.getProductsFromCart()
+    this.productService.getProductsFromCart()
+      .subscribe({
+        next : data => {
+          this.products = data
+        },
+        error : err => {}
+      })
   }
 
   removeFromCart(product: Cart) {
@@ -27,7 +33,7 @@ export class CartComponent implements OnInit{
     this.productService.removeFromCart(product)
       .subscribe({
         next : value => {
-          this.getProductsFromCart()
+          this.products = this.products.filter(p => p.id != product.id)
         },
         error : err => {
           alert("Errorrrrr!!!")
@@ -35,7 +41,12 @@ export class CartComponent implements OnInit{
       })
   }
 
-  updatePrice(product : Cart) {
+  //Initiation du montant total
+  totalAmount : number = 0
 
+  updateTotalPrice(product : Cart) {
+    for (let product of this.products){
+      this.totalAmount += product.quantity * product.price
+    }
   }
 }

@@ -15,11 +15,11 @@
         </thead>
         <tbody>
         <!-- Exemple d'élément de produit dans le panier -->
-        <tr *ngFor="let product of products$ | async">
+        <tr *ngFor="let product of products">
           <td><img src="assets/images/perfume.jpg" alt="Parfum" class="img-thumbnail" style="max-width: 100px;"></td>
           <td>{{product.name}}</td>
           <td>{{product.price}} MAD</td>
-          <td><input type="number" [(ngModel)]="product.quantity" (input)="updatePrice(product)" value="1" min="1" max="10"></td>
+          <td><input type="number" [(ngModel)]="product.quantity" (input)="updateTotalPrice(product)" value="1" min="1" max="10"></td>
           <td>{{product.price * product.quantity}} MAD</td>
           <td><button (click)="removeFromCart(product)" class="btn btn-danger">
             Supprimer
@@ -34,8 +34,8 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Récapitulatif de la Commande</h5>
-          <p class="card-text">Total des Articles : 1</p>
-          <p class="card-text">Montant Total : 100 MAD</p>
+          <p class="card-text">Total des Articles : {{products.length}}</p>
+          <p class="card-text">Montant Total : {{totalAmount}} MAD</p>
           <a href="#" class="btn btn-primary">Passer la Commande</a>
         </div>
       </div>

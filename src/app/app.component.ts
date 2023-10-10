@@ -11,6 +11,7 @@ export class AppComponent {
   actions : Array<any> = [
     {title : "Accueil", "route" : "/home", icon : "bi bi-house"},
     {title : "Catalogue", "route" : "/catalog", icon : ""},
+    {title : "Panier", "route" : "/cart", icon : "bi bi-basket-fill"},
     {title : "A Propos", "route" : "/about", icon : "bi bi-question"},
   ]
 

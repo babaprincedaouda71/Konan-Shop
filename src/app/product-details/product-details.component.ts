@@ -35,4 +35,16 @@ export class ProductDetailsComponent implements OnInit{
         }
       })
   }
+
+  addToCart(product: any) {
+    this.productService.addToCart(product)
+      .subscribe({
+        next : data => {
+          alert("Sucessss!!!!!")
+        },
+        error : err => {
+          alert("Failedddd!!!!!")
+        }
+      })
+  }
 }

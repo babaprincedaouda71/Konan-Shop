@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ProductService} from "../services/product.service";
 import {ActivatedRoute} from "@angular/router";
+import {Product} from "../model/product.model";
 
 @Component({
   selector: 'app-product-details',
@@ -36,7 +37,7 @@ export class ProductDetailsComponent implements OnInit{
       })
   }
 
-  addToCart(product: any) {
+  addToCart(product: Product) {
     this.productService.addToCart(product)
       .subscribe({
         next : data => {

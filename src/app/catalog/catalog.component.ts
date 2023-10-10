@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {ProductService} from "../services/product.service";
 
 @Component({
   selector: 'app-catalog',
@@ -7,13 +7,13 @@ import {HttpClient} from "@angular/common/http";
   styleUrls: ['./catalog.component.css']
 })
 export class CatalogComponent implements OnInit{
-  constructor(private http : HttpClient) {
+  constructor(private productService : ProductService) {
   }
 
   parfumes : Array<any> = []
 
   ngOnInit(): void {
-    this.http.get<Array<any>>("http://localhost:3000/perfumes")
+    this.productService.getProducts()
       .subscribe({
         next : data =>{
           this.parfumes = data

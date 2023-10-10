@@ -1,6 +1,8 @@
 {
   "perfumes" : [
     {"id" : 1, "name" : "One Million", "description" : "", "price" : 50},
-    {"id" : 2, "name" : "One Million", "description" : "", "price" : 50}
+    {"id" : 2, "name" : "Invictus", "description" : "", "price" : 50},
+    {"id" : 3, "name" : "Savage", "description" : "", "price" : 50},
+    {"id" : 4, "name" : "Ultra Male", "description" : "", "price" : 50}
   ]
 }

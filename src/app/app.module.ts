@@ -16,6 +16,7 @@ import { AboutComponent } from './about/about.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import { CustomerComponent } from './customer/customer.component';
+import { NewCustomerComponent } from './new-customer/new-customer.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CustomerComponent } from './customer/customer.component';
     NavigationBarComponent,
     InventoryManagementComponent,
     AboutComponent,
-    CustomerComponent
+    CustomerComponent,
+    NewCustomerComponent
   ],
   imports: [
     BrowserModule,

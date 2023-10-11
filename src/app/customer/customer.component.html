@@ -1,1 +1,24 @@
-<p>customer works!</p>
+<div class="container mt-5">
+  <h1 class="text-center">Liste des Consommateurs</h1>
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nom</th>
+      <th>Prénom</th>
+      <th>Adresse E-mail</th>
+      <th>Numérog de Téléphone</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let customer of customers">
+      <td>{{customer.id}}</td>
+      <td>{{customer.last_name}}</td>
+      <td>{{customer.first_name}}</td>
+      <td>{{customer.address_mail}}</td>
+      <td>{{customer.phone_number}}</td>
+    </tr>
+    <!-- Ajoutez d'autres lignes pour chaque consommateur -->
+    </tbody>
+  </table>
+</div>

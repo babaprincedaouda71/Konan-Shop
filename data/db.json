@@ -47,5 +47,14 @@
       "price": 50,
       "quantity": 1
     }
+  ],
+  "customers" : [
+    {
+      "id" : "1",
+      "first_name" : "Baba",
+      "last_name" : "Prince",
+      "address_mail" : "babaprince@gmail.com",
+      "phone_number" : "+216693823094"
+    }
   ]
 }

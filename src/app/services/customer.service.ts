@@ -14,7 +14,7 @@ export class CustomerService {
     return this.http.get<Array<Customer>>("http://localhost:3000/customers")
   }
 
-  public saveCustomer(customer : Customer){
-    return this.http.post("http://localhost:3000/customers", customer)
+  public saveCustomer(customer : Customer) : Observable<Customer>{
+    return this.http.post<Customer>("http://localhost:3000/customers", customer)
   }
 }

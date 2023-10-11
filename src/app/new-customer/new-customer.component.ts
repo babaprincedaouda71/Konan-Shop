@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
-import {Customer} from "../model/customer.model";
 import {CustomerService} from "../services/customer.service";
+import {Customer} from "../model/customer.model";
 
 @Component({
   selector: 'app-new-customer',
@@ -27,7 +27,8 @@ export class NewCustomerComponent implements OnInit{
 
   //Method pour ajouter un nouveau consommateur
   saveCustomer() {
-    let customer = this.formGroup.value
+    let customer : Customer = this.formGroup.value
+    //Attribution static d'un id au consommateur
     customer.id = this.nbrCustomers + 1
     this.customerService.saveCustomer(customer)
       .subscribe({

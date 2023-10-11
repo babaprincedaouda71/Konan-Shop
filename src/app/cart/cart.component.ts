@@ -45,6 +45,7 @@ export class CartComponent implements OnInit{
   totalAmount : number = 0
 
   updateTotalPrice(product : Cart) {
+    this.totalAmount = 0
     for (let product of this.products){
       this.totalAmount += product.quantity * product.price
     }

@@ -15,6 +15,7 @@ import { InventoryManagementComponent } from './inventory-management/inventory-m
 import { AboutComponent } from './about/about.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
+import { CustomerComponent } from './customer/customer.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {FormsModule} from "@angular/forms";
     FooterComponent,
     NavigationBarComponent,
     InventoryManagementComponent,
-    AboutComponent
+    AboutComponent,
+    CustomerComponent
   ],
   imports: [
     BrowserModule,

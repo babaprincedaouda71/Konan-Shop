@@ -48,13 +48,34 @@
       "quantity": 1
     }
   ],
-  "customers" : [
+  "customers": [
     {
-      "id" : "1",
-      "first_name" : "Baba",
-      "last_name" : "Prince",
-      "address_mail" : "babaprince@gmail.com",
-      "phone_number" : "+216693823094"
+      "id": "1",
+      "first_name": "Baba",
+      "last_name": "Prince",
+      "address_mail": "babaprince@gmail.com",
+      "phone_number": "+216693823094"
+    },
+    {
+      "first_name": "Latifa",
+      "last_name": "Aziz",
+      "address_mail": "latifa@fmail.com",
+      "phone_number": "+212696358565",
+      "id": 2
+    },
+    {
+      "first_name": "testa",
+      "last_name": "tzt",
+      "address_mail": "test@gmail.com",
+      "phone_number": "",
+      "id": 3
+    },
+    {
+      "first_name": "sfksdd",
+      "last_name": "ddsd",
+      "address_mail": "sdfsdffgfd",
+      "phone_number": "xfgdfdf",
+      "id": 4
     }
   ]
 }

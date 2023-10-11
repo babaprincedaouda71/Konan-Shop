@@ -13,4 +13,8 @@ export class CustomerService {
   public getCustomers() : Observable<Array<Customer>>{
     return this.http.get<Array<Customer>>("http://localhost:3000/customers")
   }
+
+  public saveCustomer(customer : Customer){
+    return this.http.post("http://localhost:3000/customers", customer)
+  }
 }

@@ -12,8 +12,8 @@ export class AppComponent {
     {title : "Accueil", "route" : "/home", icon : "bi bi-house"},
     {title : "Catalogue", "route" : "/catalog", icon : ""},
     {title : "Panier", "route" : "/cart", icon : "bi bi-basket-fill"},
-    {title : "Clients", "route" : "/customers", icon : "bi bi-"},
-    {title : "Nouveau Client", "route" : "/new-customer", icon : "bi bi-plus"},
+    {title : "Clients", "route" : "/customers", icon : "bi bi-people-fill"},
+    {title : "Nouveau Client", "route" : "/new-customer", icon : "bi bi-person-plus"},
     {title : "A Propos", "route" : "/about", icon : "bi bi-question"},
   ]
 

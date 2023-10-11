@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
+import {Customer} from "../model/customer.model";
+import {CustomerService} from "../services/customer.service";
 
 @Component({
   selector: 'app-new-customer',
@@ -9,18 +11,40 @@ import {FormBuilder, FormGroup} from "@angular/forms";
 export class NewCustomerComponent implements OnInit{
 
   public formGroup! : FormGroup
-  constructor(private formBuilder : FormBuilder) {
+  constructor(private formBuilder : FormBuilder, private customerService : CustomerService) {
   }
+  //Nombre de consommateur dans la base de données
+  nbrCustomers : number = 0
   ngOnInit(): void {
     this.formGroup = this.formBuilder.group({
       first_name : this.formBuilder.control(""),
       last_name : this.formBuilder.control(""),
       address_mail : this.formBuilder.control(""),
-      phone : this.formBuilder.control(""),
+      phone_number : this.formBuilder.control("")
     })
+    this.countCustomer()
   }
 
+  //Method pour ajouter un nouveau consommateur
   saveCustomer() {
+    let customer = this.formGroup.value
+    customer.id = this.nbrCustomers + 1
+    this.customerService.saveCustomer(customer)
+      .subscribe({
+        next : data => {},
+        error : err => {
+          alert("Erreur lors de la sauvegarde")
+        }
+      })
+  }
 
+  //Method pour compter le nombre de consommateur
+  countCustomer(){
+    this.customerService.getCustomers()
+      .subscribe({
+        next : data => {
+          this.nbrCustomers = data.length
+        }
+      })
   }
 }

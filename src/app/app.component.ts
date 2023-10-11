@@ -13,6 +13,7 @@ export class AppComponent {
     {title : "Catalogue", "route" : "/catalog", icon : ""},
     {title : "Panier", "route" : "/cart", icon : "bi bi-basket-fill"},
     {title : "Clients", "route" : "/customers", icon : "bi bi-"},
+    {title : "Nouveau Client", "route" : "/new-customer", icon : "bi bi-plus"},
     {title : "A Propos", "route" : "/about", icon : "bi bi-question"},
   ]
 

@@ -14,7 +14,7 @@ import { NavigationBarComponent } from './navigation-bar/navigation-bar.componen
 import { InventoryManagementComponent } from './inventory-management/inventory-management.component';
 import { AboutComponent } from './about/about.component';
 import {HttpClientModule} from "@angular/common/http";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { CustomerComponent } from './customer/customer.component';
 import { NewCustomerComponent } from './new-customer/new-customer.component';
 
@@ -32,13 +32,14 @@ import { NewCustomerComponent } from './new-customer/new-customer.component';
     InventoryManagementComponent,
     AboutComponent,
     CustomerComponent,
-    NewCustomerComponent
+    NewCustomerComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

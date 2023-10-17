@@ -21,10 +21,10 @@ export class ProductService {
     return this.http.get<Product>(`http://localhost:3000/perfumes/${productId}`)
   }
 
-  public addToCart(product : Product) : Observable<any>{
+  public addToCart(product : Cart) : Observable<any>{
     return this.http.post("http://localhost:3000/cart", product)
   }
-  public removeFromCart(product : Product) : Observable<any>{
+  public removeFromCart(product : Cart) : Observable<any>{
     return this.http.delete(`http://localhost:3000/cart/${product.id}`)
   }
 }

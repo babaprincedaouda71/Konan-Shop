@@ -17,10 +17,10 @@
         <!-- Exemple d'élément de produit dans le panier -->
         <tr *ngFor="let product of products">
           <td><img src="assets/images/perfume.jpg" alt="Parfum" class="img-thumbnail" style="max-width: 100px;"></td>
-          <td>{{product.name}}</td>
-          <td>{{product.price}} MAD</td>
+          <td>{{product.articles.name}}</td>
+          <td>{{product.articles.price}} MAD</td>
           <td><input type="number" [(ngModel)]="product.quantity" (input)="updateTotalPrice(product)" value="1" min="1" max="10"></td>
-          <td>{{product.price * product.quantity}} MAD</td>
+          <td>{{product.articles.price                       * product.quantity}} MAD</td>
           <td><button (click)="removeFromCart(product)" class="btn btn-danger">
             Supprimer
             <i class="bi bi-trash"></i>
